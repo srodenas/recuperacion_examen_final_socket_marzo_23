@@ -20,13 +20,13 @@ public class UserDataThread extends Thread{
     private Socket socket;  //socker que conecta con el cliente.
     private PrintWriter pw; //Para salida de datos hacia el cliente
     private Scanner sc;     //Para lectura de datos desde el cliente
-    private Routing operationManager;
+    private Routing routing;
     private boolean logged  = false;  //El hilo no está logueado.
     private boolean exit = false;  //Para el estado de cierre de conexión
 
-    public UserDataThread (Socket socket, Routing operManager){
+    public UserDataThread (Socket socket, Routing routing){
         this.socket = socket;
-        this.operationManager = operManager;  //gestor de operaciones Rest
+        this.routing = routing;  //gestor de operaciones Rest
     }
 
     @Override
@@ -46,7 +46,7 @@ public class UserDataThread extends Thread{
               System.out.printf("Recibida conexión desde %s:%d: %s%n", address.getHostAddress(), socket.getPort(), line);
       
               //Ejecutamos el comando recibido del cliente.  
-              this.operationManager.execute(pw, line, this);
+              this.routing.execute(pw, line, this);
               if (isExit()){
                 socket.close();
                 pw.close();
