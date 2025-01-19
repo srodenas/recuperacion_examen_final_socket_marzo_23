@@ -1,10 +1,7 @@
 import java.io.PrintWriter;
-import java.util.List;
 
 import server.application.Routing;
-import server.data.repository.UserRepository;
 import server.domain.interfaces.GenericRepositoryInterface;
-import server.domain.model.User;
 
 
 public class Test {
@@ -12,7 +9,7 @@ public class Test {
     static Routing operationManager;
     static final PrintWriter writer = new PrintWriter(System.out);
    
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         repository = new UserRepository();
         userCaseManager = new Routing(repository); 
         insertTest();
@@ -81,8 +78,9 @@ public class Test {
        
     }
     private static void hashMD5TestFail(){
-        final String cmd = "hash5 noexiste";
+        final String cmd = "hash5 no existe";
         operationManager.execute(writer, cmd);
        
     }
+        */
 }

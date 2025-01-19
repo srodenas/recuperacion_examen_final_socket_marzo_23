@@ -26,6 +26,10 @@ public class GetHashUseCase implements RestInterface{
         pw.println(response);
         pw.flush();
     }
+    public GetHashUseCase (GenericRepositoryInterface repository){
+        this.repository = repository;
+     }
+
 
 
     /*
