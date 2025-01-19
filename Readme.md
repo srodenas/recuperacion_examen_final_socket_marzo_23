@@ -51,6 +51,14 @@ El flujo general es el siguiente:
 4. El **caso de uso** interactúa con el repositorio de datos para obtener o modificar información.
 5. El **servidor** envía una respuesta al cliente.
 
+### Ejecución
+
+Hay que crear el fichero launch.json para crear los agumentos tanto en el cliente como en el servidor. Pongo el mio de ejemplo
+El fichero se debe crear en la ejecución y depuración.
+
+1. En el cliente, añadimos "args" : ["localhost", "3000"]
+2. En el servidor, añadimos "args" : ["3000"]
+
 ## Diagrama de Clases UML
 
 A continuación se presenta el diagrama de clases que refleja la estructura de las clases y sus relaciones en la solución:
