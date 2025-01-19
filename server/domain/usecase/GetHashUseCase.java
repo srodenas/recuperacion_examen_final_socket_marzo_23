@@ -7,7 +7,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.infraestructure.server.UserDataThread;
 /*
@@ -20,11 +20,7 @@ import server.infraestructure.server.UserDataThread;
  //SIMULAMOS EL CASO DE USO QUE IMPLEMENTA DEVOLVER EL HASH DE UN FICHERO.
 
 public class GetHashUseCase implements RestInterface{
-    private GenericRepository repository;
-
-    public GetHashUseCase (GenericRepository repository){
-        this.repository = repository;
-     }
+    private GenericRepositoryInterface repository;
 
      public void responseHttp(String response, PrintWriter pw){
         pw.println(response);

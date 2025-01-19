@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.model.User;
 
 /*
@@ -11,7 +11,7 @@ import server.domain.model.User;
  * NUESTRA CLASE DEBE IMPLEMENTAR LOS MÉTODOS PROPUESTOS EN EL CONTRATO DE LA INTERFAZ.
  */
 
-public class UserRepository<T> implements GenericRepository<T>{
+public class UserRepository<T> implements GenericRepositoryInterface<T>{
 
     // Necesitamos una clave para el User
     private AtomicInteger automaticId;

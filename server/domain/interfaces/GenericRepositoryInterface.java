@@ -18,7 +18,7 @@ import java.util.List;
  * LOS GENÉRICOS
  * 
  */
-public interface GenericRepository<T> {
+public interface GenericRepositoryInterface<T> {
 
    //Inserta un objeto genérico
    public void  add(T o);      

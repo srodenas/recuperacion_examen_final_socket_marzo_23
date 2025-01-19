@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.domain.model.User;
 import server.infraestructure.server.UserDataThread;
@@ -14,9 +14,9 @@ import server.infraestructure.server.UserDataThread;
  * SIMULAMOS EL CASO DE USO DEL REGISTRO
  */
 public class RegisterUseCase implements RestInterface{
-    private GenericRepository repository;
+    private GenericRepositoryInterface repository;
 
-    public RegisterUseCase (GenericRepository repository){
+    public RegisterUseCase (GenericRepositoryInterface repository){
         this.repository = repository;
     }
 

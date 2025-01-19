@@ -4,7 +4,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 
 import server.data.repository.UserRepository;
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.domain.usecase.GetHashUseCase;
 import server.domain.usecase.LoginUseCase;
@@ -34,7 +34,7 @@ import server.infraestructure.server.UserDataThread;
 public class Routing {
     
     private final HashMap<String, RestInterface> maganerEndPoints;  //Simulamos el gestor de endpoint que el servidor puede tratar. 
-    private final GenericRepository repository; //aquí tenemos el repositorio. Todos los métodos sobre el acceso a datos.
+    private final GenericRepositoryInterface repository; //aquí tenemos el repositorio. Todos los métodos sobre el acceso a datos.
 
 
 

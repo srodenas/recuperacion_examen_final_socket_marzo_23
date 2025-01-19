@@ -5,7 +5,6 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import server.application.Routing;
-import server.domain.interfaces.GenericRepository;
 import server.infraestructure.server.UserDataThread;
 
 /*
@@ -25,7 +24,7 @@ public class UserServer {
     public static void main(String[] args) {
         int port = -1; 
         //Recurso Compartido de los hilos. Trabaja directamente con la lista de Usuarios.
-        final GenericRepository userManager; 
+      //  final GenericRepository userManager; 
 
 
         //Probamos que se le pase un parámetro puerto.

@@ -2,7 +2,7 @@ package server.domain.usecase;
 
 import java.io.PrintWriter;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.domain.model.User;
 import server.infraestructure.server.UserDataThread;
@@ -12,14 +12,14 @@ import server.infraestructure.server.UserDataThread;
  * SIMULAMOS EL CASO DE USO QUE SE OCUPA DEL LOGUEO
  */
 public class LoginUseCase implements RestInterface{
-    private GenericRepository repository;
+    private GenericRepositoryInterface repository;
    
     /*
      *  @param pw (flujo salida), args (argumentos del comando), context (hilo que atiende al cliente)
      *  @return boolean true (correcto), false(no correcto)
      */
 
-     public LoginUseCase (GenericRepository repository){
+     public LoginUseCase (GenericRepositoryInterface repository){
         this.repository = repository;
      }
 

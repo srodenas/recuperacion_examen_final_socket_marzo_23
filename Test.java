@@ -3,12 +3,12 @@ import java.util.List;
 
 import server.application.Routing;
 import server.data.repository.UserRepository;
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.model.User;
 
 
 public class Test {
-    static GenericRepository repository;
+    static GenericRepositoryInterface repository;
     static Routing operationManager;
     static final PrintWriter writer = new PrintWriter(System.out);
    

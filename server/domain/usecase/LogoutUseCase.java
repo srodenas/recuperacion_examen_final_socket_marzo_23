@@ -2,7 +2,7 @@ package server.domain.usecase;
 
 import java.io.PrintWriter;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.infraestructure.server.UserDataThread;
 
@@ -11,9 +11,9 @@ import server.infraestructure.server.UserDataThread;
  * SIMULAMOS EL CASO DE USO QUE SIMULA EL DESLOGUEO
  */
 public class LogoutUseCase implements RestInterface{
-    private GenericRepository repository;
+    private GenericRepositoryInterface repository;
 
-    public LogoutUseCase (GenericRepository repository){
+    public LogoutUseCase (GenericRepositoryInterface repository){
         this.repository = repository;
     }
 

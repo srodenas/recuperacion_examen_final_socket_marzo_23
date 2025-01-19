@@ -2,7 +2,7 @@ package server.domain.usecase;
 
 import java.io.PrintWriter;
 
-import server.domain.interfaces.GenericRepository;
+import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.domain.model.User;
 import server.infraestructure.server.UserDataThread;
@@ -12,9 +12,9 @@ import server.infraestructure.server.UserDataThread;
  * SIMULAMOS EL CASO DE USO QUE IMPRIME LOS DATOS DE UN USUARIO
  */
 public class UserDataUseCase implements RestInterface{
-    private GenericRepository repository;
+    private GenericRepositoryInterface repository;
 
-    public UserDataUseCase (GenericRepository repository){
+    public UserDataUseCase (GenericRepositoryInterface repository){
         this.repository = repository;
     }
 
