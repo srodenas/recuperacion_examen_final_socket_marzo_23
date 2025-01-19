@@ -71,10 +71,13 @@ public class Routing {
      * UserDataThread (Es el contexto o el hilo que invoca a este this)
      */
     public boolean execute(PrintWriter pw, String body, UserDataThread context){
+        System.out.println (body);
         String [] args = body.split(" ");  //separamos en líneas lo recibido como dato.
         
         try{
+            System.out.println("Estamos dentro del hash, El verbo es "+ args[0]);
             String verb = args[0]; //extraemos el verbo del servicio.
+            
             RestInterface endPoint = maganerEndPoints.get(verb);  //Seleccionamos el Servicio. Cada servicio será un caso de uso.
 
             /*
@@ -84,6 +87,7 @@ public class Routing {
                 responseHttp("Error, debes pasar un comando válido", pw);
                 return false;
             }
+            
 
             /*
              * Separamos tanto el verbo (servicio), como sus argumentos.

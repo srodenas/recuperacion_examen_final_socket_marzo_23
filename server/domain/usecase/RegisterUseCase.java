@@ -67,7 +67,7 @@ public class RegisterUseCase implements RestInterface{
         try{
 
 
-            final String  path="22_23/recuperacion_examen_final_socket_marzo_23/files/";  
+            final String  path="recuperacion_examen_final_socket_marzo_23/files/";  
             File file = new File(path + args[0] + ".dat");
             final String absolutePathFile = file.getAbsolutePath();
             

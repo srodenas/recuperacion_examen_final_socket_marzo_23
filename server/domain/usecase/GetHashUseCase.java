@@ -54,7 +54,8 @@ public class GetHashUseCase implements RestInterface{
             return false;
         }
 
-        final String path="22_23/recuperacion_examen_final_socket_marzo_23/files/";  
+        final String path="recuperacion_examen_final_socket_marzo_23/files/";  
+       // final String path="files/";
         File file = new File(path + args[0] + ".dat");
         final String absolutePathFile = file.getAbsolutePath();
 
@@ -63,8 +64,10 @@ public class GetHashUseCase implements RestInterface{
          * que devuelve el hash de ese fichero.
          */
         if (file.exists() && !file.isDirectory()){
-            final String [] cmd = {"CertUtil", "-hashfile", absolutePathFile, "MD5"};
-           
+            //en windows, he probado CertUtil
+           // final String [] cmd = {"CertUtil", "-hashfile", absolutePathFile, "MD5"};
+           //En Mac, probaré con md5
+            final String [] cmd = {"md5", absolutePathFile};
             String  msg = "";
             ProcessBuilder pb = new ProcessBuilder(cmd);
     
@@ -92,9 +95,11 @@ public class GetHashUseCase implements RestInterface{
                 return false;
             }
     
-            String [] hash = msg.split(":");
-            String [] hash1 = hash[2].split("CertUtil");
-            responseHttp("Codigo Hash MD5 " + hash1[0], pw);
+            String [] hash = msg.split("=");
+           // String [] hash1 = hash[2].split("CertUtil");  //solo para windows
+           //String [] hash1 = hash[2].split("MD5");
+           // responseHttp("Codigo Hash MD5 " + hash1[0], pw);
+           responseHttp("Codigo Hash MD5 " + hash[1], pw);
             return true;
         }
         responseHttp("No se ha encontrado el fichero", pw);
