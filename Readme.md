@@ -1,4 +1,4 @@
-# Solución Examen Ejercicio Usuario Hash
+# Solución Examen Usuario Hash VERSIÓN DE Santiago Rodenas Herráiz.
 ## PSP 24-25
 
 Este repositorio contiene la solución al examen de la asignatura PSP (Programación de Servicios y Proyectos) del curso 2024-2025. El ejercicio consiste en implementar un sistema que gestione usuarios, permita registrar, iniciar y cerrar sesión, obtener datos de usuario y gestionar el hash de contraseñas.
