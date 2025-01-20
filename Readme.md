@@ -136,7 +136,11 @@ class Routing {
 
 class UserDataThread {
     -routing: Routing
+    -logged: Boolean
+    -exit: Boolean
     +run(): void
+    +setLogin(Boolean): void
+    +setExit(Boolean): void
 }
 
 class UserServer {
@@ -161,7 +165,7 @@ UserRepository *-- "0..*" User : contains
 Routing *-- "1..*" RestInterface : uses
 Routing *-- "1..*" GenericRepositoryInterface : uses
 
-UserDataThread *-- Routing : contains
+
 
 RestInterface ..> UserDataThread : dependency
 
