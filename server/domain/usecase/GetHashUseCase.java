@@ -11,7 +11,7 @@ import server.domain.interfaces.GenericRepositoryInterface;
 import server.domain.interfaces.RestInterface;
 import server.infraestructure.server.UserDataThread;
 /*
- * VERSIÓN DE Santiago Rodenas Herráiz, para PSP 22-23
+ * VERSIÓN DE Santiago Rodenas Herráiz, para PSP para PSP 24-25
  * 
  * Esta clase, crea un proceso que devolverá el hash de un fichero
  * previamente existente.

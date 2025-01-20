@@ -8,7 +8,7 @@ import server.application.Routing;
 import server.infraestructure.server.UserDataThread;
 
 /*
- * VERSIÓN DE Santiago Rodenas Herráiz, para PSP 22-23
+ * VERSIÓN DE Santiago Rodenas Herráiz, para PSP 24-25
  * 
  * Creará un hilo por petición de cliente.
  * Existirá un único objeto que compartirán todos los hilos, que será el administrador

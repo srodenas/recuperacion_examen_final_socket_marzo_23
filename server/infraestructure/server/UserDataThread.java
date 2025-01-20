@@ -9,7 +9,7 @@ import java.util.Scanner;
 import server.application.Routing;
 
 /*
- * VERSIÓN DE Santiago Rodenas Herráiz, para PSP 22-23
+ * VERSIÓN DE Santiago Rodenas Herráiz, para PSP para PSP 24-25
  * 
  * El hilo se encargará de invocar a los servicios que pida el cliente.
  * Al crearse el hilo, se le pasa el recurso compartido a partir de Administrador
